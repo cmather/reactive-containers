@@ -6,7 +6,6 @@ Package.describe({
 Package.on_use(function (api) {
   api.use('underscore');
   api.use('deps');
-  api.use('ui');
 
   api.add_files('utils.js', ['client'])
   api.add_files('reactive_cached_value.js', ['client'])

@@ -1,7 +1,7 @@
 ReactiveReadyList = function () {
   var self = this;
   this._list = [];
-  this._value = new ReactiveCachedValue(_.bind(this._isEveryItemReady, this));
+  this._value = Deps.cache(this._isEveryItemReady, this);
 };
 
 ReactiveReadyList.prototype = {

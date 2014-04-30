@@ -37,3 +37,7 @@ ReactiveCachedValue.prototype = {
     return Deps.nonreactive(function () { return self._func(); });
   }
 };
+
+Deps.cache = function (func, thisArg) {
+  return new ReactiveCachedValue(_.bind(func, thisArg));
+};
